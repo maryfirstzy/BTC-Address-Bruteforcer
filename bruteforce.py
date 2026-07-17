@@ -11,7 +11,8 @@ while True:
     wallet = bitcoinlib.wallets.Wallet('WalletName')
     i += 1
     print("[{}] {}".format(i, wallet.get_key().address))
-    if wallet.get_address_uncompressed() == address_to_hack:
+    if wallet.get_key().address == address_to_hack:
+
         print("   => Hacked ! Private key : {}".format(wallet.get_wif_uncompressed()))
         break
 
