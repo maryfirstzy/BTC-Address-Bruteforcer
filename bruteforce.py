@@ -17,7 +17,7 @@ while True:
         break
 
     i += 1
-    print("[{}] {}".format(i, wallet.get_address_compressed()))
+    print("[{}] {}".format(i, wallet.get_key().address))
     if wallet.get_address_compressed() == address_to_hack:
         print("   => Hacked ! Private key : {}".format(wallet.get_wif_compressed()))
         break
