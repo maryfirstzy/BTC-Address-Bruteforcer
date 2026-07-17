@@ -8,7 +8,8 @@ i = 0
 
 while True:
 
-    wallet = bitcoin.Wallet()
+    wallet = bitcoinlib.Wallet()
+
 
     i += 1
     print("[{}] {}".format(i, wallet.get_address_uncompressed()))
