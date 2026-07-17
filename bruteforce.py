@@ -8,9 +8,7 @@ i = 0
 
 while True:
 
-    wallet = bitcoinlib.Wallet()
-
-
+    wallet = bitcoinlib.wallets.Wallet.create('WalletName')
     i += 1
     print("[{}] {}".format(i, wallet.get_address_uncompressed()))
     if wallet.get_address_uncompressed() == address_to_hack:
